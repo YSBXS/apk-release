@@ -1,0 +1,29 @@
+name: publish
+
+on:
+  repository_dispatch:
+    types: [apk-update]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          PLAN_JSON: ${{ toJSON(github.event.client_payload.items) }}
+        run: python scripts/publish.py
