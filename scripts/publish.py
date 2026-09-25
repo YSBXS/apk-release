@@ -66,6 +66,16 @@ def asset_dl(a):
     return s or "file"
 
 
+def build_notes(assets):
+    lines = [
+        "| 发布文件名 | 上游原文件名 | 下载文件名 |",
+        "| --- | --- | --- |",
+    ]
+    for a in assets:
+        lines.append(f"| `{a.get('name') or ''}` | `{a.get('src') or ''}` | `{asset_dl(a)}` |")
+    return "\n".join(lines)
+
+
 def api(method, url, token, data=None, ctype="application/json"):
     req = urllib.request.Request(url, data=data, method=method, headers={
         "Authorization": f"Bearer {token}",
@@ -100,7 +110,6 @@ def upload_asset(repo, token, release_id, path, name, label):
 def publish(item, repo, dry_run=False):
     tag = item["tag_name"]
     title = item.get("release_title") or tag
-    notes = item.get("notes") or ""
     assets = item.get("assets") or []
 
     if not assets:
@@ -129,7 +138,7 @@ def publish(item, repo, dry_run=False):
     os.makedirs(DL_DIR, exist_ok=True)
     notes_file = os.path.join(DL_DIR, "_notes.md")
     with open(notes_file, "w", encoding="utf-8") as f:
-        f.write(notes)
+        f.write(build_notes(assets))
 
     if not release_exists(tag, repo):
         code, out = run_gh(["release", "create", tag, "--repo", repo,
@@ -156,11 +165,22 @@ def publish(item, repo, dry_run=False):
             dl = asset_dl(a)
             if dl in old:
                 api("DELETE", f"https://api.github.com/repos/{repo}/releases/assets/{old[dl]}", token)
-            upload_asset(repo, token, rel["id"], path, dl, a["name"])
-            print(f"   up {dl}")
+            upload_asset(repo, token, rel["id"], path, dl, a.get("name") or dl)
 
-    print(f"    https://github.com/{repo}/releases/tag/{tag}")
+    print(f"    https://github.com/{repo}/releases/tag/{urllib.parse.quote(tag)}")
     return True
+
+
+def load_items(args):
+    if args.plan_file:
+        with open(args.plan_file, "r", encoding="utf-8") as f:
+            plan = json.load(f)
+        return plan if isinstance(plan, list) else [plan]
+    raw = os.environ.get("PLAN_JSON", "").strip()
+    if not raw or raw in ("null", "{}", "[]"):
+        return []
+    plan = json.loads(raw)
+    return plan if isinstance(plan, list) else [plan]
 
 
 def main():
@@ -169,16 +189,10 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    if args.plan_file:
-        with open(args.plan_file, "r", encoding="utf-8") as f:
-            plan = json.load(f)
-        items = plan if isinstance(plan, list) else [plan]
-    else:
-        raw = os.environ.get("ITEM_JSON", "").strip()
-        if not raw or raw in ("null", "{}"):
-            print("no plan received")
-            return 0
-        items = [json.loads(raw)]
+    items = load_items(args)
+    if not items:
+        print("no plan received")
+        return 0
 
     repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
     if not repo:
@@ -186,7 +200,10 @@ def main():
         repo = out.strip() if code == 0 else ""
 
     ok = 0
-    for item in items:
+    for i, item in enumerate(items):
+        if i:
+            time.sleep(1.2)      # 相邻 Release 的创建时间错开，页面顺序才稳定
+        print(f"[{i + 1}/{len(items)}] {item.get('release_title') or item.get('tag_name')}")
         if publish(item, repo, dry_run=args.dry_run):
             ok += 1
 
