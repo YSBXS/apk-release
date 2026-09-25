@@ -81,7 +81,8 @@ def api(method, url, token, data=None, ctype="application/json"):
 
 def get_release(repo, tag, token):
     try:
-        return api("GET", f"https://api.github.com/repos/{repo}/releases/tags/{tag}", token)
+        return api("GET", f"https://api.github.com/repos/{repo}/releases/tags/"
+                          f"{urllib.parse.quote(tag, safe='')}", token)
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return None
