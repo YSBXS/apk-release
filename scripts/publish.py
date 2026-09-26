@@ -57,6 +57,39 @@ def release_exists(tag, repo):
     return code == 0
 
 
+def now_iso():
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+_head_tree = {}
+
+
+def ensure_tag(repo, token, tag, when):
+    """让 tag 指向一个「提交日期 = when」的空提交。
+
+    GitHub 的 Release created_at 取自 tag 所指 commit 的提交日期，不是创建时间；
+    tag 都指向同一个 commit 时所有 created_at 相同，发布页会退化成按 tag 名排序。
+    tag 已存在则不动它。"""
+    ref = f"https://api.github.com/repos/{repo}/git/ref/tags/{urllib.parse.quote(tag, safe='')}"
+    try:
+        api("GET", ref, token)
+        return
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise
+    if repo not in _head_tree:
+        info = api("GET", f"https://api.github.com/repos/{repo}", token)
+        head = api("GET", f"https://api.github.com/repos/{repo}/commits/"
+                          f"{urllib.parse.quote(info['default_branch'], safe='')}", token)
+        _head_tree[repo] = head["commit"]["tree"]["sha"]
+    who = {"name": "apk-release", "email": "apk-release@users.noreply.github.com", "date": when}
+    commit = api("POST", f"https://api.github.com/repos/{repo}/git/commits", token,
+                 json.dumps({"message": f"release {tag}", "tree": _head_tree[repo],
+                             "parents": [], "author": who, "committer": who}).encode("utf-8"))
+    api("POST", f"https://api.github.com/repos/{repo}/git/refs", token,
+        json.dumps({"ref": f"refs/tags/{tag}", "sha": commit["sha"]}).encode("utf-8"))
+
+
 def asset_dl(a):
     dl = (a.get("dl") or "").strip()
     if dl:
@@ -140,15 +173,22 @@ def publish(item, repo, dry_run=False):
     with open(notes_file, "w", encoding="utf-8") as f:
         f.write(build_notes(assets))
 
-    if not release_exists(tag, repo):
-        code, out = run_gh(["release", "create", tag, "--repo", repo,
-                            "--title", title, "--notes-file", notes_file,
-                            "--latest=false"])
-        if code != 0:
-            print(f"    create failed: {out.strip()[:500]}")
-            return False
-
     token = os.environ.get("GH_TOKEN", "").strip()
+
+    if not release_exists(tag, repo):
+        if token:
+            ensure_tag(repo, token, tag, (item.get("published") or "").strip() or now_iso())
+            api("POST", f"https://api.github.com/repos/{repo}/releases", token,
+                json.dumps({"tag_name": tag, "name": title, "body": build_notes(assets),
+                            "make_latest": "false"}, ensure_ascii=False).encode("utf-8"))
+        else:
+            code, out = run_gh(["release", "create", tag, "--repo", repo,
+                                "--title", title, "--notes-file", notes_file,
+                                "--latest=false"])
+            if code != 0:
+                print(f"    create failed: {out.strip()[:500]}")
+                return False
+
     if not token:
         code, out = run_gh(["release", "upload", tag, "--repo", repo,
                             "--clobber"] + [p for _, p in local])
