@@ -27,3 +27,28 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PLAN_JSON: ${{ toJSON(github.event.client_payload.items) }}
         run: python scripts/publish.py
+
+      - name: 更新 README 软件列表
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python scripts/update_readme.py
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "README 无变化，无需提交"
+            exit 0
+          fi
+          git commit -m "docs: 更新软件列表 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase origin main || true
+            if git push origin HEAD:main; then
+              echo "README 已更新"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "README 推送失败"
+          exit 1
