@@ -58,12 +58,12 @@ def main():
         latest[app] = (ver or rel.get("tag_name") or "", rel.get("html_url") or "")
         order.append(app)
 
-    rows = ["| 序号 | 软件名称 | 最新版本 | 最新发布 |", "| --- | --- | --- | --- |"]
+    rows = ["| 序号 | 软件名称 | 最新版本 | 下载 |", "| --- | --- | --- | --- |"]
     for i, app in enumerate(order, 1):
         ver, url = latest[app]
-        rows.append(f"| {i} | [{app}]({url}) | [{ver}]({url}) | [点击下载]({url}) |")
+        rows.append(f"| {i} | {app} | {ver} | [点击下载]({url}) |")
     block = (f"{START}\n目前共 {len(order)} 款，均为上游官方安装包。"
-             f"点「最新版本」或「点击下载」可直接跳到该软件的最新 Release。\n\n"
+             f"点最后一列「点击下载」可直达该软件的最新 Release。\n\n"
              + "\n".join(rows) + f"\n{END}")
 
     text = open(README, encoding="utf-8").read()
