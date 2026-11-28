@@ -7,7 +7,7 @@
 
 这里只做搬运和整理：安装包来自各软件作者的官方发布渠道，自动同步，不修改、不植入任何东西。
 
-最后更新：2026.11.28 11:28
+最后更新：2026.11.28 15:16
 
 ## 下载
 
@@ -23,46 +23,46 @@
 
 | 序号 | 软件名称 | 最新版本 | 下载 |
 | --- | --- | --- | --- |
-| 1 | 短剧之家苹果手机版 | 4.6.108-287 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-0923-duanjuzhijiapingguoshoujiban-4.6.108-287) |
-| 2 | 糖葫芦影视 | 1.0.0-2026.11.28.0855 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-0855-tanghuluyingshi-1.0.0-2026.11.28.0855) |
-| 3 | 默影视 | 5.6.0-beta-202611280015 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-0027-moyingshi-5.6.0-beta-202611280015) |
-| 4 | 潇洒本地包+潇洒本地仓 | 2026.11.27.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-xiaosabendibao-xiaosabendicang-202611272) |
-| 5 | myMusic | 1.1.93 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-2309-myMusic-1.1.93) |
-| 6 | 短剧之家手机版 | 4.6.107-286 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-2300-duanjuzhijiashoujiban-4.6.107-286) |
-| 7 | 红果短剧 | 0.8.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-2214-hongguoduanju-0.8.2) |
-| 8 | HGTV | 1.4.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-2134-HGTV-1.4.0) |
-| 9 | 阿圈短剧 | 1.12.33 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-1936-aquanduanju-1.12.33) |
-| 10 | 魔蚁TV | 2026.11.27+41 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-1249-moyiTV-2026.11.27-41) |
-| 11 | 红果TV | 0.16.20 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-1213-hongguoTV-0.16.20) |
-| 12 | 小果影视 | 2.0.4-116 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-0929-xiaoguoyingshi-2.0.4-116) |
-| 13 | i短剧 | 1.6.41-android | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2244-iduanju-1.6.41-android) |
-| 14 | 短剧之家电脑版 | pc-app-v4.5.51-191-beta | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2244-duanjuzhijiadiannaoban-pc-app-v4.5.51-191-beta) |
-| 15 | 短剧之家TV版 | tv-app-v4.6.68-171-beta | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2223-duanjuzhijiaTVban-tv-app-v4.6.68-171-beta) |
-| 16 | 短剧之家苹果电视版 | 1.1.25-30-beta | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2221-duanjuzhijiapingguodianshiban-1.1.25-30-beta) |
-| 17 | myBV | alpha-r1185 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-1722-myBV-alpha-r1185) |
-| 18 | myHotpot | 1.1.36 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-1503-myHotpot-1.1.36) |
-| 19 | MisaTV | 1.4.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-0855-MisaTV-1.4.0) |
-| 20 | mytv | 3.0.0.245 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-1901-mytv-3.0.0.245) |
-| 21 | myDV | 2.4.51 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-1843-myDV-2.4.51) |
-| 22 | AI字幕影视 | 6.6.0 (1536) | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-1533-AIzimuyingshi-6.6.0-1536) |
-| 23 | 唐三影视模块 | 2026.11.25 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-1307-tangsanyingshimokuai-2026.11.25) |
-| 24 | JetStream | 195 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-0305-JetStream-195) |
-| 25 | 红果短剧iOS | 0.1.33 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261124-2126-hongguoduanjuiOS-0.1.33) |
-| 26 | Z影视 | 1.7.32 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261124-1447-Zyingshi-1.7.32) |
-| 27 | HGhub | 0.0.5 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261124-1109-HGhub-0.0.5) |
-| 28 | 唐三影视 | 5.9.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261122-1802-tangsanyingshi-5.9.0) |
-| 29 | AIBOX | 0.1.57 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261121-2117-AIBOX-0.1.57) |
-| 30 | WebTV | 5.17.4 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261121-1545-WebTV-5.17.4) |
-| 31 | TVboxOSC | 3.1.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261120-1320-TVboxOSC-3.1.2) |
-| 32 | 真果鉴 | 0.9.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261118-2303-zhenguojian-0.9.0) |
-| 33 | 白盒 | 20261118-1218 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261118-0634-baihe-20261118-1218) |
-| 34 | XMBOX | 3.2.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261118-0429-XMBOX-3.2.0) |
-| 35 | AudioVideoBox | 1.4.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261113-1301-AudioVideoBox-1.4.0) |
-| 36 | 阅读 | 3.26.11100743 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261110-0803-yuedu-3.26.11100743) |
-| 37 | 蚂蚁影视 | 2.0.6 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261108-0814-mayiyingshi-2.0.6) |
-| 38 | 阅读鸿蒙版 | 3.26.110301 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261103-0242-yueduhongmengban-3.26.110301) |
-| 39 | 落雪音乐手机版 | 1.9.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261030-1512-luoxueyinyueshoujiban-1.9.2) |
-| 40 | WebHomeTV | 5.6.0-202609241253 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20260924-0506-WebHomeTV-5.6.0-202609241253) |
-| 41 | 落雪音乐电脑版 | 2.12.6 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20260919-0223-luoxueyinyuediannaoban-2.12.6) |
+| 1 | 红果TV | 0.16.21 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1409-hongguoTV-0.16.21) |
+| 2 | 阅读 | 3.26.11281235 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1255-yuedu-3.26.11281235) |
+| 3 | 糖葫芦影视 | 1.0.0-2026.11.28.1253 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1254-tanghuluyingshi-1.0.0-2026.11.28.1253) |
+| 4 | HGTV | 1.4.0.1 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1245-HGTV-1.4.0.1) |
+| 5 | 落雪音乐电脑版 | 2.12.7 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1241-luoxueyinyuediannaoban-2.12.7) |
+| 6 | mytv | 3.0.0.246 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1215-mytv-3.0.0.246) |
+| 7 | myBV | alpha-r1187 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1208-myBV-alpha-r1187) |
+| 8 | myDV | 2.4.52 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1207-myDV-2.4.52) |
+| 9 | myMusic | 1.1.101 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1202-myMusic-1.1.101) |
+| 10 | 落雪音乐手机版 | 1.9.3 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1156-luoxueyinyueshoujiban-1.9.3) |
+| 11 | HGhub | 0.0.6 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-1148-HGhub-0.0.6) |
+| 12 | 短剧之家苹果手机版 | 4.6.108-287 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-0923-duanjuzhijiapingguoshoujiban-4.6.108-287) |
+| 13 | 默影视 | 5.6.0-beta-202611280015 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261128-0027-moyingshi-5.6.0-beta-202611280015) |
+| 14 | 潇洒本地包+潇洒本地仓 | 2026.11.27.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-xiaosabendibao-xiaosabendicang-202611272) |
+| 15 | 短剧之家手机版 | 4.6.107-286 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-2300-duanjuzhijiashoujiban-4.6.107-286) |
+| 16 | 红果短剧 | 0.8.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-2214-hongguoduanju-0.8.2) |
+| 17 | 阿圈短剧 | 1.12.33 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-1936-aquanduanju-1.12.33) |
+| 18 | 魔蚁TV | 2026.11.27+41 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-1249-moyiTV-2026.11.27-41) |
+| 19 | 小果影视 | 2.0.4-116 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261127-0929-xiaoguoyingshi-2.0.4-116) |
+| 20 | i短剧 | 1.6.41-android | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2244-iduanju-1.6.41-android) |
+| 21 | 短剧之家电脑版 | pc-app-v4.5.51-191-beta | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2244-duanjuzhijiadiannaoban-pc-app-v4.5.51-191-beta) |
+| 22 | 短剧之家TV版 | tv-app-v4.6.68-171-beta | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2223-duanjuzhijiaTVban-tv-app-v4.6.68-171-beta) |
+| 23 | 短剧之家苹果电视版 | 1.1.25-30-beta | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-2221-duanjuzhijiapingguodianshiban-1.1.25-30-beta) |
+| 24 | myHotpot | 1.1.36 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-1503-myHotpot-1.1.36) |
+| 25 | MisaTV | 1.4.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261126-0855-MisaTV-1.4.0) |
+| 26 | AI字幕影视 | 6.6.0 (1536) | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-1533-AIzimuyingshi-6.6.0-1536) |
+| 27 | 唐三影视模块 | 2026.11.25 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-1307-tangsanyingshimokuai-2026.11.25) |
+| 28 | JetStream | 195 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261125-0305-JetStream-195) |
+| 29 | 红果短剧iOS | 0.1.33 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261124-2126-hongguoduanjuiOS-0.1.33) |
+| 30 | Z影视 | 1.7.32 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261124-1447-Zyingshi-1.7.32) |
+| 31 | 唐三影视 | 5.9.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261122-1802-tangsanyingshi-5.9.0) |
+| 32 | AIBOX | 0.1.57 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261121-2117-AIBOX-0.1.57) |
+| 33 | WebTV | 5.17.4 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261121-1545-WebTV-5.17.4) |
+| 34 | TVboxOSC | 3.1.2 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261120-1320-TVboxOSC-3.1.2) |
+| 35 | 真果鉴 | 0.9.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261118-2303-zhenguojian-0.9.0) |
+| 36 | 白盒 | 20261118-1218 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261118-0634-baihe-20261118-1218) |
+| 37 | XMBOX | 3.2.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261118-0429-XMBOX-3.2.0) |
+| 38 | AudioVideoBox | 1.4.0 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261113-1301-AudioVideoBox-1.4.0) |
+| 39 | 蚂蚁影视 | 2.0.6 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261108-0814-mayiyingshi-2.0.6) |
+| 40 | 阅读鸿蒙版 | 3.26.110301 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20261103-0242-yueduhongmengban-3.26.110301) |
+| 41 | WebHomeTV | 5.6.0-202609241253 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20260924-0506-WebHomeTV-5.6.0-202609241253) |
 | 42 | 黑盒 | 20260227-1116 | [点击下载](https://github.com/YSBXS/apk-release/releases/tag/20260227-0342-heihe-20260227-1116) |
 <!-- APPS:END -->
